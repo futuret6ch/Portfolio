@@ -38,14 +38,40 @@ import {
   Users,
   Workflow
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [currentYear, setCurrentYear] = useState(2026);
 
+  const [aboutScale, setAboutScale] = useState(1);
+  const [aboutHeight, setAboutHeight] = useState<number | string>("auto");
+  const aboutHeadingRef = useRef<HTMLHeadingElement>(null);
+  const aboutContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
+  }, []);
+
+  useEffect(() => {
+    const handleAboutResize = () => {
+      if (!aboutHeadingRef.current || !aboutContainerRef.current) return;
+      const parentWidth = aboutContainerRef.current.clientWidth;
+      const headingWidth = aboutHeadingRef.current.scrollWidth;
+      
+      if (headingWidth > parentWidth && parentWidth > 0) {
+        const s = parentWidth / headingWidth;
+        setAboutScale(s);
+        setAboutHeight(aboutHeadingRef.current.scrollHeight * s);
+      } else {
+        setAboutScale(1);
+        setAboutHeight("auto");
+      }
+    };
+
+    handleAboutResize();
+    window.addEventListener("resize", handleAboutResize);
+    return () => window.removeEventListener("resize", handleAboutResize);
   }, []);
 
   return (
@@ -198,11 +224,27 @@ export default function Home() {
         {/* WHO WE ARE SECTION */}
         <section id="who-we-are" className="py-24 border-t border-white/5 w-full flex flex-col items-center justify-center">
           {/* Heading Container */}
-          <div className="w-full max-w-[1600px] overflow-visible text-left">
+          <div 
+            ref={aboutContainerRef}
+            className="w-full max-w-[1600px] overflow-visible text-left"
+            style={{ height: aboutHeight }}
+          >
             <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue block mb-6">
               Who We Are
             </span>
-            <h2 className="font-display font-black uppercase text-white about-heading tracking-tighter">
+            <h2 
+              ref={aboutHeadingRef}
+              className="font-display font-black uppercase text-white tracking-tighter"
+              style={{
+                fontSize: "clamp(8rem, 12vw, 16rem)",
+                lineHeight: "0.85",
+                fontWeight: 900,
+                letterSpacing: "-0.04em",
+                transform: aboutScale !== 1 ? `scale(${aboutScale})` : "none",
+                transformOrigin: "left top",
+                display: "inline-block",
+              }}
+            >
               Engineering <br />
               The <br />
               Future <br />
