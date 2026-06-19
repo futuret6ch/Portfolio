@@ -106,3 +106,23 @@ html {
 .text-shadow-glow {
   text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
+
+/* Responsive About Section Heading */
+.about-heading {
+  font-family: var(--font-syne), sans-serif;
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: clamp(4rem, 7vw, 7rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-heading {
+    font-size: clamp(5rem, 8vw, 9rem);
+  }
+}

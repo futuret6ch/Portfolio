@@ -196,20 +196,26 @@ export default function Home() {
         </section>
 
         {/* WHO WE ARE SECTION */}
-        <section id="who-we-are" className="py-24 border-t border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue">
+        <section id="who-we-are" className="py-24 border-t border-white/5 overflow-hidden">
+          <div className="flex flex-col md:flex-row gap-[60px] md:gap-[80px] lg:gap-[120px] items-start w-full">
+            <div 
+              className="w-full md:w-[45%] max-w-[700px] space-y-4 overflow-hidden" 
+              style={{ wordBreak: "keep-all", whiteSpace: "normal" }}
+            >
+              <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue block">
                 Who We Are
               </span>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-none text-white">
-                Engineering <br className="hidden md:inline" />
-                The Future <br className="hidden md:inline" />
+              <h2 className="font-display font-extrabold uppercase text-white about-heading">
+                Engineering <br />
+                The Future <br />
                 Of Intelligence
               </h2>
             </div>
-            <div className="lg:col-span-7 space-y-6 text-text-secondary text-base md:text-lg leading-relaxed font-medium">
-              <p>
+            <div 
+              className="w-full md:w-[55%] max-w-[800px] text-text-secondary text-[1.2rem] leading-[1.8] font-medium"
+              style={{ position: "relative", zIndex: 10, maxWidth: "700px" }}
+            >
+              <p className="mb-6">
                 Gorli Janardhan Naidu is an AI Solutions Architect specializing in healthcare technology, AI-powered software, intelligent automation, full-stack development, and scalable digital platforms.
               </p>
               <p>
