@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Syne, Outfit } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const syne = Syne({
@@ -80,6 +81,7 @@ export default function RootLayout({
     >
       <body className="bg-bg-base text-white antialiased min-h-screen selection:bg-glow-purple/30 selection:text-white">
         {children}
+        <Analytics />
       </body>
     </html>
   );
