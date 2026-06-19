@@ -2,8 +2,12 @@
 
 import BookingModal from "@/components/BookingModal";
 import GlassCard from "@/components/GlassCard";
-import NetworkBackground from "@/components/NetworkBackground";
 import TechStack from "@/components/TechStack";
+import dynamic from "next/dynamic";
+
+const NetworkBackground = dynamic(() => import("@/components/NetworkBackground"), {
+  ssr: false,
+});
 import { motion } from "framer-motion";
 import {
   Activity,
