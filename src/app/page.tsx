@@ -954,12 +954,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex gap-3">
-                  <button
-                    onClick={() => setBookingOpen(true)}
-                    className="inline-flex items-center gap-2 rounded-lg bg-glow-blue px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-white hover:bg-glow-blue/80 transition-all"
+                  <a
+                    href="https://ai.studio/apps/caaf8273-115b-441c-9f66-5c3d3ba64718"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-glow-blue px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-white hover:bg-glow-blue/80 hover:shadow-lg hover:shadow-glow-blue/30 transition-all cursor-pointer"
                   >
-                    Live Demo <ArrowUpRight className="h-3.5 w-3.5" />
-                  </button>
+                    Live Demo <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
                   <a
                     href="https://github.com"
                     target="_blank"
