@@ -196,32 +196,32 @@ export default function Home() {
         </section>
 
         {/* WHO WE ARE SECTION */}
-        <section id="who-we-are" className="py-24 border-t border-white/5 overflow-hidden">
-          <div className="flex flex-col md:flex-row gap-[60px] md:gap-[80px] lg:gap-[120px] items-start w-full">
-            <div 
-              className="w-full md:w-[45%] max-w-[700px] space-y-4 overflow-hidden" 
-              style={{ wordBreak: "keep-all", whiteSpace: "normal" }}
-            >
-              <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue block">
-                Who We Are
-              </span>
-              <h2 className="font-display font-extrabold uppercase text-white about-heading">
-                Engineering <br />
-                The Future <br />
-                Of Intelligence
-              </h2>
-            </div>
-            <div 
-              className="w-full md:w-[55%] max-w-[800px] text-text-secondary text-[1.2rem] leading-[1.8] font-medium"
-              style={{ position: "relative", zIndex: 10, maxWidth: "700px" }}
-            >
-              <p className="mb-6">
-                Gorli Janardhan Naidu is an AI Solutions Architect specializing in healthcare technology, AI-powered software, intelligent automation, full-stack development, and scalable digital platforms.
-              </p>
-              <p>
-                Focused on building real-world solutions that improve clinical workflows, automate repetitive business processes, and create measurable bottom-line impact. By combining cutting-edge LLM frameworks, robust database modeling, and state-of-the-art Web interfaces, he bridges the gap between academic AI research and deployable enterprise software.
-              </p>
-            </div>
+        <section id="who-we-are" className="py-24 border-t border-white/5 w-full flex flex-col items-center justify-center">
+          {/* Heading Container */}
+          <div className="w-full max-w-[1600px] overflow-visible text-left">
+            <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue block mb-6">
+              Who We Are
+            </span>
+            <h2 className="font-display font-black uppercase text-white about-heading tracking-tighter">
+              Engineering <br />
+              The <br />
+              Future <br />
+              Of <br />
+              Intelligence
+            </h2>
+          </div>
+          
+          {/* Paragraph Container */}
+          <div 
+            className="w-full max-w-[900px] text-text-secondary text-[1.2rem] leading-[1.8] font-medium text-left"
+            style={{ position: "relative", zIndex: 10, marginTop: "80px" }}
+          >
+            <p className="mb-6">
+              Gorli Janardhan Naidu is an AI Solutions Architect specializing in healthcare technology, AI-powered software, intelligent automation, full-stack development, and scalable digital platforms.
+            </p>
+            <p>
+              Focused on building real-world solutions that improve clinical workflows, automate repetitive business processes, and create measurable bottom-line impact. By combining cutting-edge LLM frameworks, robust database modeling, and state-of-the-art Web interfaces, he bridges the gap between academic AI research and deployable enterprise software.
+            </p>
           </div>
         </section>
 
