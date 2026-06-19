@@ -1183,8 +1183,8 @@ export default function Home() {
               </button>
 
               <a
-                href="mailto:gorli.janardhan@example.com"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-white/8 bg-white/5 hover:bg-white/10 px-8 py-4 text-xs font-bold uppercase tracking-widest text-text-secondary hover:text-white transition-all"
+                href="mailto:jana.teja2003@gmail.com?subject=Project%20Inquiry&body=Hello%20Gorli%20Janardhan%20Naidu,%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.%0A%0ARegards"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-glow-blue/20 bg-glow-blue/10 hover:bg-glow-blue/20 px-8 py-4 text-xs font-bold uppercase tracking-widest text-glow-blue hover:shadow-lg hover:shadow-glow-blue/25 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
                 Email Me <Mail className="h-4 w-4" />
               </a>
