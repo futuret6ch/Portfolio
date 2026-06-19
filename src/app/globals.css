@@ -1,37 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --color-bg-base: #040409;
-  --color-bg-secondary: #0a0a16;
-  --color-card-glass: rgba(15, 15, 35, 0.7);
-  --color-glow-blue: #3b82f6;
-  --color-glow-purple: #8b5cf6;
-  --color-glow-accent: #a855f7;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #b0b8c5;
-  --color-border-glass: rgba(255, 255, 255, 0.08);
-
-  --font-display: var(--font-syne), sans-serif;
-  --font-body: var(--font-outfit), sans-serif;
-
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-glow: glow 10s ease-in-out infinite;
-  --animate-pulse-slow: pulse 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-grid-move: grid-move 20s linear infinite;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(1deg); }
-  }
-  @keyframes glow {
-    0%, 100% { opacity: 0.3; transform: scale(1); filter: blur(80px); }
-    50% { opacity: 0.6; transform: scale(1.1); filter: blur(100px); }
-  }
-  @keyframes grid-move {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(50px); }
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
