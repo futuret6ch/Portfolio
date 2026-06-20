@@ -3,6 +3,7 @@
 import BookingModal from "@/components/BookingModal";
 import GlassCard from "@/components/GlassCard";
 import TechStack from "@/components/TechStack";
+import ConsultationForm from "@/components/ConsultationForm";
 import dynamic from "next/dynamic";
 
 const NetworkBackground = dynamic(() => import("@/components/NetworkBackground"), {
@@ -1157,6 +1158,25 @@ export default function Home() {
           </div>
         </section>
 
+        {/* BOOK CONSULTATION SECTION */}
+        <section id="book-consultation" className="py-24 border-t border-white/5 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-16">
+            <div className="text-center max-w-3xl mx-auto space-y-4">
+              <span className="text-xs uppercase font-extrabold tracking-widest text-glow-blue">
+                Initiate Booking
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-none text-white">
+                BOOK CONSULTATION
+              </h2>
+              <p className="text-text-secondary text-sm md:text-base font-medium max-w-xl mx-auto">
+                Submit your project specifications directly to Gorli Janardhan Naidu. No email application required.
+              </p>
+            </div>
+
+            <ConsultationForm />
+          </div>
+        </section>
+
         {/* CONTACT SECTION */}
         <section id="contact" className="py-32 border-t border-white/5 flex flex-col justify-center items-center text-center">
           <div className="space-y-6 max-w-4xl">
@@ -1200,6 +1220,21 @@ export default function Home() {
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.45 5.535 0 10.026-4.437 10.03-9.874.002-2.634-1.018-5.11-2.881-6.974-1.862-1.863-4.329-2.886-6.969-2.887-5.54 0-10.03 4.437-10.033 9.879-.001 1.765.474 3.493 1.377 5.02L1.087 21.725l5.56-1.571zM17.16 14.79c-.282-.141-1.666-.822-1.921-.914-.257-.09-.443-.136-.63.141-.186.28-.72.914-.882 1.096-.162.183-.326.206-.607.065-.282-.141-1.19-.44-2.266-1.403-.837-.749-1.403-1.674-1.567-1.956-.164-.282-.018-.435.123-.575.127-.127.282-.329.424-.494.14-.165.187-.282.282-.47.094-.189.046-.353-.023-.494-.069-.141-.63-1.517-.862-2.08-.227-.547-.457-.472-.63-.48l-.53-.01c-.183-.002-.482.068-.733.342-.252.274-.962.94-.962 2.292 0 1.353.984 2.658 1.122 2.846.137.189 1.938 2.96 4.695 4.15 2.757 1.19 2.757.793 3.257.747.5-.046 1.667-.68 1.902-1.336.236-.656.236-1.22.165-1.336-.07-.116-.254-.202-.536-.343z"/>
                 </svg>
               </a>
+            </div>
+
+            {/* Direct Contact Details Block */}
+            <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 text-xs font-mono tracking-widest text-text-secondary border-t border-white/5 pt-8">
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-glow-blue" />
+                <span>EMAIL: <a href="mailto:jana.teja2003@gmail.com" className="text-white hover:text-glow-blue transition-colors">jana.teja2003@gmail.com</a></span>
+              </div>
+              <div className="hidden md:block text-white/20">|</div>
+              <div className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-[#25D366] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.45 5.535 0 10.026-4.437 10.03-9.874.002-2.634-1.018-5.11-2.881-6.974-1.862-1.863-4.329-2.886-6.969-2.887-5.54 0-10.03 4.437-10.033 9.879-.001 1.765.474 3.493 1.377 5.02L1.087 21.725l5.56-1.571zM17.16 14.79c-.282-.141-1.666-.822-1.921-.914-.257-.09-.443-.136-.63.141-.186.28-.72.914-.882 1.096-.162.183-.326.206-.607.065-.282-.141-1.19-.44-2.266-1.403-.837-.749-1.403-1.674-1.567-1.956-.164-.282-.018-.435.123-.575.127-.127.282-.329.424-.494.14-.165.187-.282.282-.47.094-.189.046-.353-.023-.494-.069-.141-.63-1.517-.862-2.08-.227-.547-.457-.472-.63-.48l-.53-.01c-.183-.002-.482.068-.733.342-.252.274-.962.94-.962 2.292 0 1.353.984 2.658 1.122 2.846.137.189 1.938 2.96 4.695 4.15 2.757 1.19 2.757.793 3.257.747.5-.046 1.667-.68 1.902-1.336.236-.656.236-1.22.165-1.336-.07-.116-.254-.202-.536-.343z"/>
+                </svg>
+                <span>WHATSAPP: <a href="https://wa.me/919154619699" target="_blank" rel="noopener noreferrer" className="text-white hover:text-glow-blue transition-colors">+91 9154619699</a></span>
+              </div>
             </div>
           </div>
         </section>
